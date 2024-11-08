@@ -4,71 +4,26 @@
     <meta charset="UTF-8">
     <title>Tabela de Produtos</title>
     <style>
-        body {
-            background-color: #f5f5dc; 
-            font-family: 'Arial', sans-serif;
-            padding: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 16px;
-        }
-        th {
-            background-color: #5c0b26; 
-            color: #ffffff;
-            padding: 10px;
-            text-align: left;
-        }
-        td {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2; 
-        }
+        body { background: #f5f5dc; font-family: Arial, sans-serif; padding: 20px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 16px; }
+        th { background: #5c0b26; color: #fff; padding: 10px; text-align: left; }
+        td { padding: 10px; border-bottom: 1px solid #ddd; }
+        tr:nth-child(even) { background: #f2f2f2; }
     </style>
 </head>
 <body>
-
     <h2 style="color: #5c0b26;">Tabela de Produtos</h2>
     <table>
         <thead>
-            <tr>
-                <th>Produto</th>
-                <th>Descrição</th>
-                <th>Preço (R$)</th>
-            </tr>
+            <tr><th>Produto</th><th>Descrição</th><th>Preço (R$)</th></tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Câmera Fotográfica</td>
-                <td>Câmera DSLR com lente 18-55mm</td>
-                <td>2.500,00</td>
-            </tr>
-            <tr>
-                <td>Fone de Ouvido</td>
-                <td>Fone de ouvido Bluetooth com cancelamento de ruído</td>
-                <td>600,00</td>
-            </tr>
-            <tr>
-                <td>Tablet</td>
-                <td>Tablet de 10 polegadas com 64GB de armazenamento</td>
-                <td>1.200,00</td>
-            </tr>
-            <tr>
-                <td>Impressora</td>
-                <td>Impressora multifuncional com Wi-Fi</td>
-                <td>700,00</td>
-            </tr>
-            <tr>
-                <td>Smartwatch</td>
-                <td>Relógio inteligente com monitoramento de saúde</td>
-                <td>900,00</td>
-            </tr>
+            <tr><td>Câmera Fotográfica</td><td>Câmera DSLR com lente 18-55mm</td><td>2.500,00</td></tr>
+            <tr><td>Fone de Ouvido</td><td>Fone de ouvido Bluetooth com cancelamento de ruído</td><td>600,00</td></tr>
+            <tr><td>Tablet</td><td>Tablet de 10 polegadas com 64GB de armazenamento</td><td>1.200,00</td></tr>
+            <tr><td>Impressora</td><td>Impressora multifuncional com Wi-Fi</td><td>700,00</td></tr>
+            <tr><td>Smartwatch</td><td>Relógio inteligente com monitoramento de saúde</td><td>900,00</td></tr>
         </tbody>
     </table>
-
 </body>
 </html>
