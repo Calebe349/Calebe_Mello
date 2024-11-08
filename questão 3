@@ -4,58 +4,16 @@
     <meta charset="UTF-8">
     <title>Formulário de Contato</title>
     <style>
-        body {
-            background-color: #f5f5dc; 
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-        .form-container {
-            background-color: #ffffff;
-            border: 1px solid #5c0b26;
-            border-radius: 10px;
-            padding: 20px;
-            width: 300px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            text-align: center;
-            color: #5c0b26;
-            margin-bottom: 20px;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-sizing: border-box;
-            font-size: 14px;
-        }
-        input[type="submit"] {
-            background-color: #5c0b26;
-            color: #ffffff;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-            font-size: 14px;
-            border-radius: 5px;
-        }
-        input[type="submit"]:hover {
-            background-color: #7a0e34;
-        }
-        .message {
-            margin-top: 15px;
-            text-align: center;
-            font-size: 14px;
-        }
+        body { background: #f5f5dc; font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .form-container { background: #fff; border: 1px solid #5c0b26; border-radius: 10px; padding: 20px; width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        h2 { text-align: center; color: #5c0b26; margin-bottom: 20px; }
+        input, textarea { width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; font-size: 14px; }
+        input[type="submit"] { background: #5c0b26; color: #fff; border: none; cursor: pointer; padding: 10px; font-size: 14px; border-radius: 5px; }
+        input[type="submit"]:hover { background: #7a0e34; }
+        .message { margin-top: 15px; text-align: center; font-size: 14px; }
     </style>
 </head>
 <body>
-
     <div class="form-container">
         <h2>Formulário de Contato</h2>
         <form id="contactForm">
@@ -66,33 +24,24 @@
         </form>
         <div id="feedback" class="message"></div>
     </div>
-
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const message = document.getElementById('message').value.trim();
-            const feedback = document.getElementById('feedback');
-
-            if (name === "" || email === "" || message === "") {
-                feedback.style.color = '#ff0000'; 
-                feedback.textContent = 'Todos os campos devem ser preenchidos.';
-            } else if (!validateEmail(email)) {
-                feedback.style.color = '#ff0000'; 
-                feedback.textContent = 'Por favor, insira um email válido.';
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim(),
+                  email = document.getElementById('email').value.trim(),
+                  message = document.getElementById('message').value.trim(),
+                  feedback = document.getElementById('feedback');
+            if (!name || !email || !message) {
+                feedback.style.color = '#f00'; feedback.textContent = 'Todos os campos devem ser preenchidos.';
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                feedback.style.color = '#f00'; feedback.textContent = 'Por favor, insira um email válido.';
             } else {
-                feedback.style.color = '#5c0b26'; 
-                feedback.textContent = 'Formulário enviado com sucesso!';
+                feedback.style.color = '#5c0b26'; feedback.textContent = 'Formulário enviado com sucesso!';
             }
         });
-
-        function validateEmail(email) {
-            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return re.test(email);
-        }
     </script>
-
 </body>
 </html>
+
+</html>
+          
