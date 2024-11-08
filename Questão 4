@@ -4,13 +4,51 @@
     <meta charset="UTF-8">
     <title>Calculadora de IMC</title>
     <style>
-        body { background: #f5f5dc; font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
-        .calculator-container { background: #fff; border: 1px solid #5c0b26; border-radius: 10px; padding: 20px; width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
-        h2 { text-align: center; color: #5c0b26; margin-bottom: 20px; }
-        input, button { width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; font-size: 14px; }
-        button { background: #5c0b26; color: #fff; border: none; cursor: pointer; }
-        button:hover { background: #7a0e34; }
-        .result { margin-top: 15px; text-align: center; font-size: 14px; }
+        body {
+            background: #f5f5dc;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .calculator-container {
+            background: #fff;
+            border: 1px solid #5c0b26;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #5c0b26;
+            margin-bottom: 20px;
+        }
+        input, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        button {
+            background: #5c0b26;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #7a0e34;
+        }
+        .result {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
@@ -40,4 +78,3 @@
     </script>
 </body>
 </html>
-
