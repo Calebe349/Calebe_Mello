@@ -4,13 +4,54 @@
     <meta charset="UTF-8">
     <title>Formulário de Contato</title>
     <style>
-        body { background: #f5f5dc; font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
-        .form-container { background: #fff; border: 1px solid #5c0b26; border-radius: 10px; padding: 20px; width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
-        h2 { text-align: center; color: #5c0b26; margin-bottom: 20px; }
-        input, textarea { width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; font-size: 14px; }
-        input[type="submit"] { background: #5c0b26; color: #fff; border: none; cursor: pointer; padding: 10px; font-size: 14px; border-radius: 5px; }
-        input[type="submit"]:hover { background: #7a0e34; }
-        .message { margin-top: 15px; text-align: center; font-size: 14px; }
+        body {
+            background: #f5f5dc;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background: #fff;
+            border: 1px solid #5c0b26;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #5c0b26;
+            margin-bottom: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        input[type="submit"] {
+            background: #5c0b26;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background: #7a0e34;
+        }
+        .message {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
@@ -32,16 +73,18 @@
                   message = document.getElementById('message').value.trim(),
                   feedback = document.getElementById('feedback');
             if (!name || !email || !message) {
-                feedback.style.color = '#f00'; feedback.textContent = 'Todos os campos devem ser preenchidos.';
+                feedback.style.color = '#f00';
+                feedback.textContent = 'Todos os campos devem ser preenchidos.';
             } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                feedback.style.color = '#f00'; feedback.textContent = 'Por favor, insira um email válido.';
+                feedback.style.color = '#f00';
+                feedback.textContent = 'Por favor, insira um email válido.';
             } else {
-                feedback.style.color = '#5c0b26'; feedback.textContent = 'Formulário enviado com sucesso!';
+                feedback.style.color = '#5c0b26';
+                feedback.textContent = 'Formulário enviado com sucesso!';
             }
         });
     </script>
 </body>
 </html>
 
-</html>
           
